@@ -85,6 +85,12 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>I:/Mega Man/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>I:/Mega Man/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>I:/Mega Man/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>I:/Mega Man/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>

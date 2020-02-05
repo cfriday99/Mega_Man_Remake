@@ -7,6 +7,8 @@ public class PlayerController2D : MonoBehaviour
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRenderer;
 
+    public Animator animator;
+    public GameObject bullet;
     public float speed;
     public float jumpForce;
 
@@ -19,12 +21,16 @@ public class PlayerController2D : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
     }
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject b = (GameObject)(Instantiate(bullet, transform.position + transform.forward * 1.5f, Quaternion.identity));
+
+            b.GetComponent<Rigidbody2D>().AddForce(transform.forward * 1000);
+        }
     }
 
     void FixedUpdate()
@@ -44,6 +50,7 @@ public class PlayerController2D : MonoBehaviour
             {
                 if (isGrounded)
                 {
+                    animator.SetFloat("Speed", speed);
                     spriteRenderer.flipX = false;
                 }
             }
@@ -56,6 +63,7 @@ public class PlayerController2D : MonoBehaviour
                 {
                     if (isGrounded)
                     {
+                        animator.SetFloat("Speed", speed);
                         spriteRenderer.flipX = true;
                     }
                 }
@@ -66,6 +74,7 @@ public class PlayerController2D : MonoBehaviour
             //animator.Play("Player_idle");
             //if (isGrounded)
             //{
+                animator.SetFloat("Speed", 0);
                 rb2d.velocity = new Vector2(0, rb2d.velocity.y);
             //}
         }
