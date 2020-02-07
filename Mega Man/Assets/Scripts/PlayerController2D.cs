@@ -26,9 +26,14 @@ public class PlayerController2D : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject b = (GameObject)(Instantiate(bullet, transform.position + transform.forward * 1.5f, Quaternion.identity));
+            animator.SetTrigger("Shoot");
 
-            b.GetComponent<Rigidbody2D>().AddForce(transform.forward * 1000);
+            Vector3 dir = transform.right;
+            if (spriteRenderer.flipX == true)
+                dir *= -1;
+            GameObject b = (GameObject)(Instantiate(bullet, transform.position + dir, Quaternion.identity));
+            Destroy(b, 3.0f);
+            b.GetComponent<Rigidbody2D>().AddForce(dir * 1000);
         }
     }
 
