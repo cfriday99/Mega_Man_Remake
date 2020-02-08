@@ -11,6 +11,7 @@ public class Teleport : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.transform.position = teleport.position;
+            other.GetComponent<PlayerController2D>().fireBulletShootable = false;
         }
     }
 }

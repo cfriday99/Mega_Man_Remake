@@ -63,11 +63,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Blinking.cs" />
+    <Compile Include="Assets\Scripts\BulletHit.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\FirePickup.cs" />
+    <Compile Include="Assets\Scripts\FireShield.cs" />
+    <Compile Include="Assets\Scripts\HeliEnemy.cs" />
     <Compile Include="Assets\Scripts\KnockBack.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MovementScript.cs" />
     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\PlayerController2D.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\StandEnemy.cs" />
     <Compile Include="Assets\Scripts\Teleport.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

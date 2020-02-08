@@ -9,32 +9,50 @@ public class PlayerController2D : MonoBehaviour
 
     public Animator animator;
     public GameObject bullet;
+    public GameObject fireBullet;
     public float speed;
     public float jumpForce;
 
     bool isGrounded;
 
     public Transform groundCheck;
+    [HideInInspector]
+    public GameObject currentBullet;
+
+    [HideInInspector]
+    public bool fireBulletShootable;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        currentBullet = bullet;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.J))
         {
-            animator.SetTrigger("Shoot");
-
-            Vector3 dir = transform.right;
-            if (spriteRenderer.flipX == true)
-                dir *= -1;
-            GameObject b = (GameObject)(Instantiate(bullet, transform.position + dir, Quaternion.identity));
-            Destroy(b, 3.0f);
-            b.GetComponent<Rigidbody2D>().AddForce(dir * 1000);
+            currentBullet = bullet;
+            Shoot();
         }
+        else if ((Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.K)) && fireBulletShootable)
+        {
+            currentBullet = fireBullet;
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        animator.SetTrigger("Shoot");
+
+        Vector3 dir = transform.right;
+        if (spriteRenderer.flipX == true)
+            dir *= -1;
+        GameObject b = (GameObject)(Instantiate(currentBullet, transform.position + dir, Quaternion.identity));
+        Destroy(b, 3.0f);
+        b.GetComponent<Rigidbody2D>().AddForce(dir * 1000);
     }
 
     void FixedUpdate()
