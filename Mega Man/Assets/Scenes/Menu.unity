@@ -231,7 +231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 21c63f8d355ca8c40b803ef4600d576f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 14c8174217c466546953cb41bb74a5cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 21c63f8d355ca8c40b803ef4600d576f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a025f25c728f52f4f9d65e115253169e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 21c63f8d355ca8c40b803ef4600d576f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51a5edd6672dc4d41be73e9322c0f884, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 21c63f8d355ca8c40b803ef4600d576f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 94ae0db4cb398ad4789bc18beb1ac0ff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1481,6 +1481,7 @@ GameObject:
   - component: {fileID: 2127093605}
   - component: {fileID: 2127093604}
   - component: {fileID: 2127093607}
+  - component: {fileID: 2127093608}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1563,9 +1564,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d8a7c8cdafe6434408a23bf4c46c2e39, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9cfee431c5b350d4cb9c6eaaccb5eeb7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1649,3 +1650,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2127093608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127093603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4400657a8dd6c764382492ee0cbfb618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
